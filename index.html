@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <a class="button" href="#" role="button">
+        <span>remove</span>
+        <div class="icon">
+            <i class="fa fa-remove"></i>
+            <i class="fa fa-check"></i>
+        </div>
+    </a>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    (function () {
+        var removeSuccess;
+
+        removeSuccess = function () {
+            return $('.button').removeClass('success');
+        };
+
+        $(document).ready(function () {
+            return $('.button').click(function () {
+                $(this).addClass('success');
+                return setTimeout(removeSuccess, 1000);
+            });
+        });
+
+    }).call(this);
+</script>
+
+</html>
